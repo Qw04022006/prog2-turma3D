@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 
-:root {    
+:root {
     --cor-de-fundo: #1E1E1E;
     --verde: #6FFF57;
     --branco: #FFFFFF;
@@ -8,11 +8,13 @@
     --botao-inativo: rgba(58, 55, 94, 0.5);
     --texto-fundo: rgba(58, 55, 94, 0.3);
 }
+
 body {
     background-color: var(--cor-de-fundo);
     color: var(--branco);
     font-family: 'Chakra Petch', sans-serif;
 }
+
 .conteudo-principal {
     display: flex;
     flex-direction: column;
@@ -22,14 +24,17 @@ body {
     width: 100%;
     margin: 0 auto;
 }
+
 .titulo-principal span {
     color: var(--verde);
 }
-{
+
+    {
     text-align: left;
     width: 100%;
     font-size: 32px;
 }
+
 .botao {
     font-family: "Crakra Petch", sans-serif;
     background-color: var(--botao-inativo);
@@ -40,39 +45,35 @@ body {
     font-size: 18px;
     align-items: center;
     width: 100%;
-    border-bottom: 4px solid var(--botao-ativo); 
-    border-left: 2px solid var(--botao-ativo); 
-    border-right: 2px solid var(--botao-ativo); 
+    border-bottom: 4px solid var(--botao-ativo);
+    border-left: 2px solid var(--botao-ativo);
+    border-right: 2px solid var(--botao-ativo);
     border-top: none;
 }
+
+.botoes {
+    display: block;
+}
+
+.botao:first-child {
+    border-radius: 40px 40px 0 0;
+}
+
+@media screen and (min-width: 768px) {
     .botoes {
-        display: block;
+        display: flex;
     }
-    
+
     .botao:first-child {
-        border-radius: 40px 40px 0 0;
+        border-radius: 40px 0 0 0;
     }
-    
-    @media screen and (min-width: 768px) {
-        .botoes {
-            display: flex;
-        }
-    
-        .botao:first-child {
-            border-radius: 40px 0 0 0;
-        }
-    
-        .botao:last-child {
-            border-radius: 0 40px 0 0;
-        }
+
+    .botao:last-child {
+        border-radius: 0 40px 0 0;
     }
-    
-    .ativo{
-        background-color: var(--botao-ativo);
-        border-bottom: 4px solid var(--verde);
-    }
-    <button class="botao ativo">Cursos na Alura</button>
-    <button class="botao">Criar projetos em Javascript</button>
-    <button class="botao">Criar um portfolio</button>
-    <button class="botao">Atualizar meu currículo</button>
-        
+}
+
+.ativo {
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+}
